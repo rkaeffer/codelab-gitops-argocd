@@ -19,7 +19,7 @@ spec:
   # Destination cluster and namespace to deploy the application
   destination:
     name: in-cluster
-    namespace: kcl-rkaeffer
+    namespace: kcl-rkaeffer-wk
 
   # Sync policy
   syncPolicy:
