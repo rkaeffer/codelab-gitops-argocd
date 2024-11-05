@@ -6,3 +6,11 @@ backend:
   host: rkaeffer-backend.codelab.cloud-sp.eu
   service:
     port: 443
+
+frontend:
+  name: my-frontend
+  image: docker.io/rkaeffer/codelab-gitops-frontend:1.0.0
+  containerPort: 4200
+  host: rkaeffer-frontend.codelab.cloud-sp.eu
+  service:
+    port: 443
