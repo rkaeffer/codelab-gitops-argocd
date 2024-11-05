@@ -1,8 +1,8 @@
 # Backend configuration
 backend:
-  name: # TODO - Nommer votre application backend
-  image: # TODO - Mettre l'image à déployer
-  containerPort: # TODO - Précisez le port d'écoute du conteneur
-  host: # TODO - Précisez l'hôte d'exposition du backend
+  name: my-backend
+  image: docker.io/rkaeffer/codelab-gitops-backend:1.0.0
+  containerPort: 8080
+  host: rkaeffer-backend.codelab.cloud-sp.eu
   service:
-    port: # TODO - Précisez le port d'exposition du service de votre pod
+    port: 443
