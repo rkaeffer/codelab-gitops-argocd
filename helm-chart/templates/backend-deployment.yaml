@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Values.backend.name }}-deployment
+  name: "{{ .Values.backend.name }}-deployment"
   labels:
     app: {{ .Values.backend.name }}
 spec:
@@ -19,3 +19,4 @@ spec:
         image: {{ .Values.backend.image }}
         ports:
         - containerPort: {{ .Values.backend.containerPort }}
+          name: http
