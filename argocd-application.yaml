@@ -1,23 +1,25 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: #TODO - Nom de votre application - Libre :)
+  name: JBOargo
   namespace: argo-cd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
   labels:
-    name: #TODO - Nom de votre application - Libre :)
+    name: JBOARGO
 spec:
   project: default
   # Source of the application manifests
   source:
-    repoURL: #TODO - Lien vers votre repository GitHub
-    path: #TODO - Chemin du chart Helm dans votre repository git 
-    targetRevision: #TODO - Branche à cibler de votre repository Git 
+    repoURL: https://github.com/jboudeau/codelab-gitops-argocd
+    path: /blob/main/helm-chart/Chart.yaml
+    targetRevision: main
     helm:
-      releaseName: #TODO - Nom à donner à votre release helm - Libre :)
+      releaseName: jbohelm
   # Destination cluster and namespace to deploy the application
   destination:
     name: in-cluster
-    namespace: #TODO - Namespace de déploiement de votre application
+    namespace: kcl-jboudeau-wk 
 
   # Sync policy
   syncPolicy:
