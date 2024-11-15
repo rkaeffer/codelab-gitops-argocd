@@ -129,8 +129,6 @@ kind: Application
 metadata:
   name: #TODO - Nom de votre application - Libre :)
   namespace: argo-cd
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
   labels:
     name: #TODO - Nom de votre application - Libre :)
 spec:
