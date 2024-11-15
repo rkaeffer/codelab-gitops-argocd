@@ -320,7 +320,7 @@ Malheureusement, un matin, vous faites une mauvaise manipulation, et executez la
 kubectl delete deploy/[nom_deployment_backend] -n kcl-[identifant]-wk
 ```
 
-Le nom du deployment backend correspond à la valorisation du nom de l'application backend que vous avez positionné dans votre fichier de values, suivi de `-service`.
+Le nom du deployment backend correspond à la valorisation du nom de l'application backend que vous avez positionné dans votre fichier de values, suivi de `-deployment`.
 Vous pouvez également le récupérer en éxecutant la commande suivante :
 
 ```bash
